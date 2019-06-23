@@ -23,6 +23,51 @@
       tr:nth-child(even) {
         background-color: #FFFFFF;
       }
+
+
+      .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #2980B9;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+
+
+
       </style>
 
   
@@ -168,16 +213,19 @@
 
 
 
-<p><img src="../img/sublime-icon.svg" alt="dess"style="width:42px;height:42px;border:0">
+<p><img src="../img/sublime-icon.svg" alt="dess"style="width:42px;style="width:100%"">
   <b><a href="https://www.sublimetext.com/"> Sublime text</a></b>
 </p>
 
+<div class="container">
 <p><a href="https://www.sublimetext.com/">
-  <img src="../img/sublime-icon.svg" alt="dess"style="width:42px;height:42px;border:0">
-  <a>Sublime text</a>
+  <img src="../img/sublime-icon.svg" alt="dess"style="width:42px;height:42px;border:0" class="image">
+  
 </p>
-
-
+<div class="middle">
+    <div class="text">Sublime text</div>
+</div>
+</div>
 
 
 <h2>HTML Table</h2>
