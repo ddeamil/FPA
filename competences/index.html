@@ -15,9 +15,7 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
 
 
 
@@ -39,6 +37,48 @@
       .checked {
         color: orange;
       }
+
+
+      .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active:after {
+      content: "\2212";
+    }
+    
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+
+
+
+
+
       </style>
 
 </head>
@@ -195,45 +235,46 @@
 
   <h2 id="Compétences transversales"><font color="#2980B9">Compétences transversales</font></h2>
 
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <h4 data-toggle="collapse" href="#collapse1"><font color="#2980B9">Clicker ici !</font></h4>
-        </h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body"><h3 ><font color="#2980B9">Informatique</font></h3></div>
-        <ul> 
-          <li> Concevoir l’ingénierie et les outils d’individualisation des parcours en utilisant les technologies numériques. </li>
-          <li> Accueillir les apprenants en formation et co-construire leurs parcours. </li>
-          <li> Former et accompagner les apprenants dans des parcours individualisés. </li>
-          
-          
-             <li> Remédier aux difficultés individuelles d’apprentissage.</li>
-          
-             <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
-          
-             <li> Analyser ses pratiques professionnelles.</li>
-             </ul>
+  <button class="collapsible">Personnalité & savoir être</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
-             <div class="panel-body"><h3 ><font color="#2980B9">Présentation</font></h3></div>
-             <ul> 
-              <li> PREZI Next & Classic. </li>
-              <li> Power Point. </li>
-              <li> Acrobat PDF PRO </li>
-              
-              
-                 <li> Remédier aux difficultés individuelles d’apprentissage.</li>
-              
-                 <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
-              
-                 <li> Analyser ses pratiques professionnelles.</li>
-                 </ul>
-        <div class="panel-footer">Panel Footer</div>
-      </div>
-    </div>
-  </div>
+<button class="collapsible">Informatique</button>
+<div class="content">
+    <ul> 
+        <li> Concevoir l’ingénierie et les outils d’individualisation des parcours en utilisant les technologies numériques. </li>
+        <li> Accueillir les apprenants en formation et co-construire leurs parcours. </li>
+        <li> Former et accompagner les apprenants dans des parcours individualisés. </li>
+        
+        
+           <li> Remédier aux difficultés individuelles d’apprentissage.</li>
+        
+           <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
+        
+           <li> Analyser ses pratiques professionnelles.</li>
+           </ul>
+</div>
+<button class="collapsible">Présentation</button>
+<div class="content">
+    <ul> 
+        <li> PREZI Next & Classic. </li>
+        <li> Power Point. </li>
+        <li> Acrobat PDF PRO </li>
+        
+        
+           <li> Remédier aux difficultés individuelles d’apprentissage.</li>
+        
+           <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
+        
+           <li> Analyser ses pratiques professionnelles.</li>
+           </ul>
+</div>
+<button class="collapsible">3d</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
 
     
 
@@ -418,6 +459,26 @@ For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+
+
+
+      <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+                content.style.maxHeight = null;
+              } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+              } 
+            });
+          }
+          </script>
+
 
 </body>
 </html>
