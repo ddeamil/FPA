@@ -1,472 +1,408 @@
-
-
-
-
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-        <meta name="description" content="Documentation technique">
-      
-      
-        <link rel="canonical" href="https://gabrielsagnard.github.io/docs.github.io/">
-      
-      
-        <meta name="author" content="Gabriel Sagnard">
-      
-      
-        <meta name="lang:clipboard.copy" content="Copier dans le presse-papier">
-      
-        <meta name="lang:clipboard.copied" content="Copié dans le presse-papier">
-      
-        <meta name="lang:search.language" content="fr">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="Aucun document trouvé">
-      
-        <meta name="lang:search.result.one" content="1 document trouvé">
-      
-        <meta name="lang:search.result.other" content="# documents trouvés">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="./assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
-    
-    
-      
-        <title>DD - mkdocs</title>
-      
-    
-    
-      <link rel="stylesheet" href="./assets/stylesheets/application.78aab2dc.css">
-      
-        <link rel="stylesheet" href="./assets/stylesheets/application-palette.6079476c.css">
-      
-    
-    
-      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
-    
-    
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-      
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-    
-    
-  </head>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    
-    
-    <body dir="ltr" data-md-color-primary="red" data-md-color-accent="red">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Compétences - D.de AMIL - FPA</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Comp\u00e9tences";
+    var mkdocs_page_input_path = "competences.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+  <style>
+      .checked {
+        color: orange;
+      }
+      </style>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
     
-      <a href="#welcome-to-mkdocs" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://gabrielsagnard.github.io/docs.github.io/" title="Gabriel Sagnard - mkdocs" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            
-              <span class="md-header-nav__topic">
-                Gabriel Sagnard - mkdocs
-              </span>
-              <span class="md-header-nav__topic">
-                Welcome to mkdocs
-              </span>
-            
-          
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Taper pour démarrer la recherche
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> D.de AMIL - FPA</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
           
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-
-  <a href="https://gabrielsagnard.github.io/docs.github.io/" title="Aller au dépôt" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      gabrielsagnard/docs.github.io
-    </div>
-  </a>
-
-          </div>
-        </div>
-      
-    </div>
-  </nav>
-</header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
           
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Compétences</a>
+    <ul class="subnav">
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
-      
-        <i class="md-icon"></i>
-      
-    </span>
-    Gabriel Sagnard - mkdocs
-  </label>
-  
-    <div class="md-nav__source">
-      
+    <li class="toctree-l2"><a href="#Formateur Professionnel d'Adultes">Formateur Professionnel d'Adultes</a></li>
+    <li class="toctree-l2"><a href="#Activité type 1">Activité type 1</a></li>
+    <li class="toctree-l2"><a href="#Activité type 2">Activité type 2</a></li>
+        <ul>
+        
+            <li><a class="toctree-l3" href="#Designer 3d">Designer 3d</a></li>
+        
+        </ul>
+    
 
-
-  
-
-
-  <a href="https://gabrielsagnard.github.io/docs.github.io/" title="Aller au dépôt" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      gabrielsagnard/docs.github.io
-    </div>
-  </a>
-
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Welcome to mkdocs
-      </label>
-    
-    <a href="." title="Welcome to mkdocs" class="md-nav__link md-nav__link--active">
-      Welcome to mkdocs
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table des matières</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item"></li>
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-a  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
     </ul>
-  
-</nav>
-    
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item"></li>
-    <a href="about/" title="About" class="md-nav__link">
-      About
-    </a>
-  </li>
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table des matières</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item"></li>
-  <a href="#commands" title="Commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item"></li>
-  <a href="#project-layout" title="Project layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
+	    </li>
           
-              <div class="md-content">
-                <article class="md-content__inner md-typeset">
-                
-              
-                
-                
-                <h1 id="welcome-to-mkdocs">Welcome to mkdocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</pre></div>
-                
-                  
-                
-              
-              
-                
-              
-            </article>
-          </div>
-        </div>
-      </main>
+            <li class="toctree-l1">
+		
+    <a class="" href="../moncv/">CV</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../projets/">Learning</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tutos/">Tutos</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../freebees/">Freebees</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-        
-          <a href="about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Suivant
-                </span>
-                About
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">D.de AMIL - FPA</a>
       </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Compétences</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="Formateur Professionnel d'Adultes"><font color="#2980B9">Formateur Professionnel d'Adultes</font></h1>
+
+
+
+
+
+<br />
+<h3 id="requirements">Activités types :</h3></p>
+<h2 id="Activité type 1"><font color="#2980B9">Activité type 1</font></h2>
+
+
+
+
+<div class="admonition note">
+
+<p class="admonition-title">Préparer et animer des actions de formation collectives en intégrant des environnements numériques</p>
+<br /> 
+<ul> 
+<li> Elaborer la progression pédagogique d’une action de formation à partir d'une demande. </li>
+
+   <li>  Concevoir le scénario pédagogique d’une séquence de formation intégrant différentes modalités pédagogiques.</li>
+
+   <li> Concevoir les activités d’apprentissage et les ressources pédagogiques d’une séquence en prenant 
+    en compte l’environnement numérique.</li>
+
+   <li> Animer un temps de formation collectif en présence ou à distance.</li>
+ <li>  Evaluer les acquis de formation des apprenants.</li>
+     <li>  Inscrire ses actes professionnels dans le cadre règlementaire et dans une démarche de responsabilité sociale,
+    environnementale et professionnelle.</li>
+   <li>  Maintenir son niveau d’expertise et de performance en tant que formateur et professionnel dans sa spécialité.</li>
+   </ul>
+</div>
+
+<p><i class="fa fa-chevron-circle-right" style="font-size:30px;color: #2980B9">Activité type 2</i></p>
+
+<h2 id="Activité type 2"><font color="#2980B9">Activité type 2</font></h2>
+
+<div class="admonition note">
+<p class="admonition-title">Construire des parcours individualisés et accompagner les apprenants</p>
+<br /> 
+<ul> 
+<li> Concevoir l’ingénierie et les outils d’individualisation des parcours en utilisant les technologies numériques. </li>
+<li> Accueillir les apprenants en formation et co-construire leurs parcours. </li>
+<li> Former et accompagner les apprenants dans des parcours individualisés. </li>
+
+
+   <li> Remédier aux difficultés individuelles d’apprentissage.</li>
+
+   <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
+
+   <li> Analyser ses pratiques professionnelles.</li>
+   </ul>
+</div>
+
+<h2 id="formations">Formations</h2>
+
+
+
+  <h2>Compétences transversales</h2>
+  <p>Click on the collapsible panel to open and close it.</p>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <h4 data-toggle="collapse" href="#collapse1">Compétences transversales</h4>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Préparer et animer des actions de formation collectives en intégrant des environnements numériques</div>
+        <ul> 
+          <li> Concevoir l’ingénierie et les outils d’individualisation des parcours en utilisant les technologies numériques. </li>
+          <li> Accueillir les apprenants en formation et co-construire leurs parcours. </li>
+          <li> Former et accompagner les apprenants dans des parcours individualisés. </li>
+          
+          
+             <li> Remédier aux difficultés individuelles d’apprentissage.</li>
+          
+             <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
+          
+             <li> Analyser ses pratiques professionnelles.</li>
+             </ul>
+        <div class="panel-footer">Panel Footer</div>
+      </div>
+    </div>
+  </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><h2><font color="#2980B9">Pédagogie Expériencielle</font></h2>
+<i class="fa fa-chevron-circle-right" style="font-size:30px;color: #2980B9">Pédagogie Immersive grâce à la VR</i></p>
+<div align="center">
+<svg width="500" height="450">
+
+<polyline points="160,80 400,80 240,340 50,20 "
+  style="fill:none;stroke:black;stroke:rgb(41,128,185);stroke-width:3" />
+
+  <circle cx="90" cy="90" r="80"
+  stroke="#2980B9" stroke-width="4" fill="#2980B9" />
+  <circle cx="400" cy="90" r="80"
+  stroke="#2980B9" stroke-width="4" fill="#2980B9" />
+   <circle cx="240" cy="320" r="80"
+  stroke="#2980B9" stroke-width="4" fill="#2980B9" />
+
+   <text fill="#ffffff" font-size="25" font-family="Verdana"
+  x="60" y="95">FPA</text>
+
+  <text fill="#ffffff" font-size="25" font-family="Verdana"
+  x="380" y="95">3d</text>
+
+
+  <text fill="#ffffff" font-size="25" font-family="Verdana"
+  x="220" y="330">VR</text>
+
+
+Sorry, your browser does not support inline SVG.
+
+</svg>
+</div>
+
+<h2 id="resources">Designer 3d </h2>
+
+<div class="admonition danger">
+<p class="admonition-title">Généralist
+<p>If you need to get in touch with me to <strong>report an error</strong>, <strong>report tool misbehavior</strong> or <strong>have another problem</strong> <a href="faq/#get-support"><strong>READ THIS FIRST</strong></a>.</p>
+
+</div>
+
+<h2>HTML Table</h2>
+
+<div align="center">
+<table>
+  <tr>
+    <th>Logiciels</th>
+    <th>maîtrise</th>
+
+  </tr>
+  <tr>
+    <td>Blender 3d</td>
+    <td><p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span></p></td>
+
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td><p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span></p></td>
+
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td><p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span></p></td>
+
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td><p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span></p></td>
+
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td><p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span></p></td>
+
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td><p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span></p></td>
+
+  </tr>
+</table>
+</div>
+
+<h2>Star Rating</h2>
+
+<p><span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span></p>
+<p><i class="fas fa-clock" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i></p>
+<p><code>mkdocs serve</code> - Start the live-reloading docs server.
+Elaborer la progression pédagogique d’une action de formation à partir d'une demande
+* 
+* <code>mkdocs build</code> - Build the documentation site.
+* <code>mkdocs help</code> - Print this help message.
+* <code>mkdocs test1</code> - Que se passe t-il ?
+For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../moncv/" class="btn btn-neutral float-right" title="CV">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
   
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Gabriel Sagnard
-          </div>
-        
-        powered by
-        <a href="http://www.mkdocs.org">mkdocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for mkdocs</a>
-      </div>
-      
-        
-  <div class="md-footer-social">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-      <a href="https://github.com/gabrielsagnard" class="md-footer-social__link fa fa-github"></a>
-    
-      <a href="https://twitter.com/gabrielsagnard" class="md-footer-social__link fa fa-twitter"></a>
-    
-      <a href="https://linkedin.com/gabrielsagnard" class="md-footer-social__link fa fa-linkedin"></a>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
     
   </div>
 
-      
-    </div>
-  </div>
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-    </div>
-    
-      <script src="./assets/javascripts/application.8eb9be28.js"></script>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
       
-        
-        
-          
-          <script src="./assets/javascripts/lunr/lunr.stemmer.support.js"></script>
-          
-            
-              
-              
-                <script src="./assets/javascripts/lunr/lunr.fr.js"></script>
-              
-            
-          
-          
-        
       
-      <script>app.initialize({version:"0.17.3",url:{base:"."}})</script>
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-    
-    
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <span style="margin-left: 15px"><a href="../moncv/" style="color: #fcfcfc">Next &raquo;</a></span>
       
-    
-  </body>
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
 </html>
