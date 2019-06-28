@@ -18,6 +18,7 @@
 
   <style>
   
+      * {box-sizing: border-box;}
       
       .img-comp-container {
         position: relative;
@@ -242,46 +243,11 @@
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+<div role="main">
+    <div class="section">
+      
+        <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
 <p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
-
-
-
-
-
-            </div>
-            <div class="section">
-
-
-    <h1>Compare Two Images</h1>
-
-    <p>Click and slide the blue slider to compare two images:</p>
-    
-    <div class="img-comp-container">
-      <div class="img-comp-img">
-        <img src="../img/Trombone_table_wire_web.png" width="300" height="200">
-      </div>
-      <div class="img-comp-img img-comp-overlay">
-        <img src="../img/Trombone_table.png" width="300" height="200">
-      </div>
-    </div>
-
-            </div>
-
-
-
-
-
-
-
-
-
-            <div class="section">
-
-
 <h2 id="commands">Commands</h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
@@ -292,12 +258,30 @@
 <h2 id="project-layout">Project layout</h2>
 <pre><code>mkdocs.yml    # The configuration file.
 docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+index.md  # The documentation homepage.
+...       # Other markdown pages, images and other files.
 </code></pre>
+      
+    </div>
 
-            
+    <div class="section">
+        <h1>Compare Two Images</h1>
+
+        <p>Click and slide the blue slider to compare two images:</p>
+        
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="../img/Trombone_table_wire_web.png" width="300" height="200">
           </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="../img/Trombone_table.png" width="300" height="200">
+</div>
+
+
+
+
+  </div>
+
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
