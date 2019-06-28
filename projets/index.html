@@ -27,6 +27,14 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
+
+
+<link rel="stylesheet" href="images-compare.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script type="text/javascript" src="jquery.images-compare.min.js"></script>
+
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -141,6 +149,22 @@ docs/
 </code></pre>
               
             </div>
+
+<div id="myImageCompare">
+    <!-- The first div will be the front element, to prevent FOUC add a style="display: none;" -->
+    <div style="display: none;">
+        <img src="../img/Trombone_table_wire_web.png" alt="Before">
+    </div>
+    <!-- This div will be the back element -->
+    <div>
+        <img src="../img/Trombone_table.png" alt="After">
+    </div>
+</div>
+
+
+
+
+            
           </div>
           <footer>
   
@@ -185,6 +209,8 @@ docs/
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+      $('#myImageCompare').imagesCompare();
+
 
 </body>
 </html>
