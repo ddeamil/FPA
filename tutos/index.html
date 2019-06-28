@@ -58,12 +58,12 @@ function initComparisons() {
     compareImages(x[i]);
   }
   function compareImages(img) {
-    var slider, img, clicked = 0, w, h;
+    var slider, img, clicked = 0, h, w;
     /*get the width and height of the img element*/
     w = img.offsetWidth;
     h = img.offsetHeight;
     /*set the width of the img element to 50%:*/
-    img.style.width = (w / 2) + "px";
+    img.style.width = (h / 2) + "px";
     /*create slider:*/
     slider = document.createElement("DIV");
     slider.setAttribute("class", "img-comp-slider");
