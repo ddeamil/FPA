@@ -1,88 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <title>jQuery Image compare</title>
-    <link rel="stylesheet" href="../css/example.css"/>
-    <link rel="stylesheet" href="../assets/css/images-compare.css"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Learning - D.de AMIL - FPA</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+
+  <link rel="stylesheet" href="../css/example.css"/>
+  <link rel="stylesheet" href="../css/images-compare.css"/>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.0.css">
+
+
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Learning";
+    var mkdocs_page_input_path = "projets.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
 </head>
-<body>
 
-<div class="page-container">
-    <h1>jQuery Image compare</h1>
-    <h2>Example</h2>
+<body class="wy-body-for-nav" role="document">
 
-    <!-- Test 1 -->
-    <div class="js-img-compare">
-        <div style="display: none;">
-            <span class="images-compare-label">Before</span>
-            <img src="../img/01-celine-skowron-before.jpg" alt="Before">
-        </div>
-        <div>
-            <span class="images-compare-label">After</span>
-            <img src="../img/01-celine-skowron-after.jpg" alt="After">
-        </div>
-    </div>
-    <div>
-        <button class="btn js-front-btn">Show front image</button>
-        <button class="btn js-back-btn">Show back image</button>
-        <button class="btn js-toggle-btn">Toggle</button>
-    </div>
+  <div class="wy-grid-for-nav">
 
-    <footer>
-        Image credits : <a href="http://celine-skowron.fr">Céline Skowron</a>
-    </footer>
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> D.de AMIL - FPA</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../competences/">Compétences</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../moncv/">CV</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Learning</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#commands">Commands</a></li>
+        
+            <li><a class="toctree-l3" href="#project-layout">Project layout</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tutos/">Tutos</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../freebees/">Freebees</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">D.de AMIL - FPA</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Learning</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
 </div>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-<script type="text/javascript" src="../src/assets/js/jquery.images-compare.js"></script>
-<script type="text/javascript">
-    $(function () {
-        var imagesCompareElement = $('.js-img-compare').imagesCompare();
-        var imagesCompare = imagesCompareElement.data('imagesCompare');
-        var events = imagesCompare.events();
 
-        imagesCompare.on(events.changed, function (event) {
-            console.log(events.changed);
-            console.log(event.ratio);
-            if (event.ratio < 0.4) {
-                console.log('We see more than half of the back image');
-            }
-            if (event.ratio > 0.6) {
-                console.log('We see more than half of the front image');
-            }
 
-            if (event.ratio <= 0) {
-                console.log('We see completely back image');
-            }
+          <div role="main">
+            <div class="section">
+              
 
-            if (event.ratio >= 1) {
-                console.log('We see completely front image');
-            }
-        });
+              
+                  <h1>jQuery Image compare</h1>
+                  <h2>Example</h2>
+<!-- Test 1 -->
+<div class="js-img-compare">
+  <div style="display: none;">
+      <span class="images-compare-label">Before</span>
+      <img src="../img/01-celine-skowron-before.jpg" alt="Before">
+  </div>
+  <div>
+      <span class="images-compare-label">After</span>
+      <img src="../img/01-celine-skowron-after.jpg" alt="After">
+  </div>
+</div>
 
-        $('.js-front-btn').on('click', function (event) {
-            event.preventDefault();
-            imagesCompare.setValue(1, true);
-        });
 
-        $('.js-back-btn').on('click', function (event) {
-            event.preventDefault();
-            imagesCompare.setValue(0, true);
-        });
 
-        $('.js-toggle-btn').on('click', function (event) {
-            event.preventDefault();
-            if (imagesCompare.getValue() >= 0 && imagesCompare.getValue() < 1) {
-                imagesCompare.setValue(1, true);
-            } else {
-                imagesCompare.setValue(0, true);
-            }
-        });
-    });
-</script>
+
+
+
+                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+<p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="commands">Commands</h2>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs help</code> - Print this help message.</li>
+</ul>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tutos/" class="btn btn-neutral float-right" title="Tutos">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../moncv/" class="btn btn-neutral" title="CV"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../moncv/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tutos/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+
+
+
+      <script src="https://code.jquery.com/qunit/qunit-2.0.0.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+      <script type="text/javascript" src="../assets/js/jquery.images-compare.js"></script>
+      <script type="text/javascript">
+          $(function () {
+              var imagesCompareElement = $('.js-img-compare').imagesCompare();
+              var imagesCompare = imagesCompareElement.data('imagesCompare');
+              var events = imagesCompare.events();
+      
+              // CHANGE EVENT TESTS AND
+              // GETTER SETTER TESTS
+              function testElementChangeEvent(event) {
+                  QUnit.test("test change event listener", function (assert) {
+                      assert.equal(event.ratio, 1, 'Change event received and value equal 1');
+                  });
+              }
+      
+              function testChangeEvent(event) {
+                  QUnit.test("test change event listener", function (assert) {
+                      assert.equal(event.ratio, 0, 'Change event received and value equal 0');
+                  });
+              }
+      
+              // Async tests
+              QUnit.test("Change event tests and getter setter tests", function (assert) {
+                  var numCalls = 3;
+                  assert.expect(numCalls);
+                  var done = assert.async(numCalls);
+      
+                  // change value 1 and listen to element
+                  setTimeout(function () {
+                      imagesCompareElement.on(events.changed, testElementChangeEvent);
+                      imagesCompare.setValue(1);
+                      assert.equal(imagesCompare.getValue(), 1, "test get and set value from outside : Changed value success (1)");
+                      done();
+                  }, 60);
+      
+                  // change value 0 and listen to "data" object
+                  setTimeout(function () {
+                      imagesCompareElement.off(events.changed, testElementChangeEvent);
+                      imagesCompare.on(events.changed, testChangeEvent);
+                      imagesCompare.setValue(0);
+                      assert.equal(imagesCompare.getValue(), 0, "test get and set value from outside : Changed value success (0)");
+                      done();
+                  }, 120);
+      
+                  setTimeout(function () {
+                      assert.ok(true, 'test get and set value from outside and event completed');
+                      imagesCompare.off(events.changed, testChangeEvent);
+                      done();
+                  }, 180);
+              });
+      
+              // RESIZE EVENT TEST
+              function testResizeEvent(event) {
+                  QUnit.test("test resize event", function (assert) {
+                      assert.ok(true, 'Resize event received');
+                  });
+              }
+      
+              imagesCompareElement.on(events.resized, testResizeEvent);
+              $(window).trigger('resize');
+              imagesCompareElement.off(events.resized, testResizeEvent);
+      
+              imagesCompare.on(events.resized, testResizeEvent);
+              $(window).trigger('resize');
+              imagesCompare.off(events.resized, testResizeEvent);
+          });
+      </script>
+
+
+
+
+
+      
 </body>
 </html>
