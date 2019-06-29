@@ -15,139 +15,12 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-<style>
 
-* {box-sizing: border-box;}
+  <link rel="stylesheet" href="../css/example.css"/>
+  <link rel="stylesheet" href="../css/images-compare.css"/>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.0.css">
 
-.img-comp-container {
-  position: relative;
-  height: 701px; /*should be the same height as the images*/
- 
-}
 
-.img-comp-img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  overflow:hidden;
-}
-
-.img-comp-img img {
-  display:block;
-  vertical-align:middle;
-}
-
-.img-comp-slider {
-  position: absolute;
-  z-index:9;
-  cursor: ew-resize;
-  /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
-  border-radius: 50%;
-}
-</style>
-<script>
-function initComparisons() {
-  var x, i;
-  /*find all elements with an "overlay" class:*/
-  x = document.getElementsByClassName("img-comp-overlay");
-  for (i = 0; i < x.length; i++) {
-    /*once for each "overlay" element:
-    pass the "overlay" element as a parameter when executing the compareImages function:*/
-    compareImages(x[i]);
-  }
-  function compareImages(img) {
-    var slider, img, clicked = 0, w, h;
-    /*get the width and height of the img element*/
-    w = img.offsetWidth;
-    h = img.offsetHeight;
-    /*set the width of the img element to 50%:*/
-    img.style.width = (w / 2) + "px";
-   
-    /*create slider:*/
-    slider = document.createElement("DIV");
-    slider.setAttribute("class", "img-comp-slider");
-    /*insert slider*/
-    img.parentElement.insertBefore(slider, img);
-    /*position the slider in the middle:*/
-    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
-    /*execute a function when the mouse button is pressed:*/
-    slider.addEventListener("mousedown", slideReady);
-    /*and another function when the mouse button is released:*/
-    window.addEventListener("mouseup", slideFinish);
-    /*or touched (for touch screens:*/
-    slider.addEventListener("touchstart", slideReady);
-    /*and released (for touch screens:*/
-    window.addEventListener("touchstop", slideFinish);
-    function slideReady(e) {
-      /*prevent any other actions that may occur when moving over the image:*/
-      e.preventDefault();
-      /*the slider is now clicked and ready to move:*/
-      clicked = 1;
-      /*execute a function when the slider is moved:*/
-      window.addEventListener("mousemove", slideMove);
-      window.addEventListener("touchmove", slideMove);
-    }
-    function slideFinish() {
-      /*the slider is no longer clicked:*/
-      clicked = 0;
-    }
-    function slideMove(e) {
-      var pos;
-      /*if the slider is no longer clicked, exit this function:*/
-      if (clicked == 0) return false;
-      /*get the cursor's x position:*/
-      pos = getCursorPos(e)
-      /*prevent the slider from being positioned outside the image:*/
-      if (pos < 0) pos = 0;
-      if (pos > w) pos = w;
-      /*execute a function that will resize the overlay image according to the cursor:*/
-      slide(pos);
-    }
-    function getCursorPos(e) {
-      var a, x = 0;
-      e = e || window.event;
-      /*get the x positions of the image:*/
-      a = img.getBoundingClientRect();
-      /*calculate the cursor's x coordinate, relative to the image:*/
-      x = e.pageX - a.left;
-      /*consider any page scrolling:*/
-      x = x - window.pageXOffset;
-      return x;
-    }
-    function slide(x) {
-      /*resize the image:*/
-      img.style.width = x + "px";
-      /*position the slider:*/
-      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-    }
-  }
-}
-</script>
-</head>
-<body>
-
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Learning - D.de AMIL - FPA</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
   <script>
     // Current page data
     var mkdocs_page_name = "Learning";
@@ -258,14 +131,31 @@ function initComparisons() {
 
 
 
+          <div role="main">
+            <div class="section">
+              
+              
+              
+                  <h1>jQuery Image compare</h1>
+                  <h2>Example</h2>
+<!-- Test 1 -->
+<div class="js-img-compare">
+  <div style="display: none;">
+      <span class="images-compare-label">Before</span>
+      <img src="../img/01-celine-skowron-before.jpg" alt="Before">
+  </div>
+  <div>
+      <span class="images-compare-label">After</span>
+      <img src="../img/01-celine-skowron-after.jpg" alt="After">
+  </div>
+</div>
 
 
 
-<div role="main">
 
-<div class="section">
-      
-        <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
+
+
+                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
 <p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
 <h2 id="commands">Commands</h2>
 <ul>
@@ -274,29 +164,6 @@ function initComparisons() {
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs help</code> - Print this help message.</li>
 </ul>
-
-<div class="section" width="480" height="701">
-
-    <h1>Compare Two Images</h1>
-    
-    <p>Click and slide the blue slider to compare two images:</p>
-    
-    <div class="img-comp-container">
-      <div class="img-comp-img">
-          <img src="../img/Trombone_table_wire_web.png" width="480" height="701">
-        </div>
-        <div class="img-comp-img img-comp-overlay">
-          <img src="../img/Trombone_table.png" width="480" height="701">
-        </div>
-    </div>
-    </div>
-
-
-
-
-
-
-
 <h2 id="project-layout">Project layout</h2>
 <pre><code>mkdocs.yml    # The configuration file.
 docs/
@@ -320,22 +187,114 @@ docs/
 
   <hr/>
 
+  <div role="contentinfo">
     <!-- Copyright etc -->
     
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../moncv/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tutos/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+
+
+
+      <script src="https://code.jquery.com/qunit/qunit-2.0.0.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+      <script type="text/javascript" src="../assets/js/jquery.images-compare.js"></script>
+      <script type="text/javascript">
+          $(function () {
+              var imagesCompareElement = $('.js-img-compare').imagesCompare();
+              var imagesCompare = imagesCompareElement.data('imagesCompare');
+              var events = imagesCompare.events();
+      
+              // CHANGE EVENT TESTS AND
+              // GETTER SETTER TESTS
+              function testElementChangeEvent(event) {
+                  QUnit.test("test change event listener", function (assert) {
+                      assert.equal(event.ratio, 1, 'Change event received and value equal 1');
+                  });
+              }
+      
+              function testChangeEvent(event) {
+                  QUnit.test("test change event listener", function (assert) {
+                      assert.equal(event.ratio, 0, 'Change event received and value equal 0');
+                  });
+              }
+      
+              // Async tests
+              QUnit.test("Change event tests and getter setter tests", function (assert) {
+                  var numCalls = 3;
+                  assert.expect(numCalls);
+                  var done = assert.async(numCalls);
+      
+                  // change value 1 and listen to element
+                  setTimeout(function () {
+                      imagesCompareElement.on(events.changed, testElementChangeEvent);
+                      imagesCompare.setValue(1);
+                      assert.equal(imagesCompare.getValue(), 1, "test get and set value from outside : Changed value success (1)");
+                      done();
+                  }, 60);
+      
+                  // change value 0 and listen to "data" object
+                  setTimeout(function () {
+                      imagesCompareElement.off(events.changed, testElementChangeEvent);
+                      imagesCompare.on(events.changed, testChangeEvent);
+                      imagesCompare.setValue(0);
+                      assert.equal(imagesCompare.getValue(), 0, "test get and set value from outside : Changed value success (0)");
+                      done();
+                  }, 120);
+      
+                  setTimeout(function () {
+                      assert.ok(true, 'test get and set value from outside and event completed');
+                      imagesCompare.off(events.changed, testChangeEvent);
+                      done();
+                  }, 180);
+              });
+      
+              // RESIZE EVENT TEST
+              function testResizeEvent(event) {
+                  QUnit.test("test resize event", function (assert) {
+                      assert.ok(true, 'Resize event received');
+                  });
+              }
+      
+              imagesCompareElement.on(events.resized, testResizeEvent);
+              $(window).trigger('resize');
+              imagesCompareElement.off(events.resized, testResizeEvent);
+      
+              imagesCompare.on(events.resized, testResizeEvent);
+              $(window).trigger('resize');
+              imagesCompare.off(events.resized, testResizeEvent);
+          });
+      </script>
 
 
 
 
 
-
-<script>
-/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
-initComparisons();
-</script>
-
+      
 </body>
 </html>
