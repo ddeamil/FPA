@@ -32,10 +32,7 @@
   overflow:hidden;
 }
 
-.img-comp-img img {
-  display:block;
-  vertical-align:middle;
-}
+
 
 .img-comp-slider {
   position: absolute;
@@ -63,7 +60,7 @@ function initComparisons() {
     var slider, img, clicked = 0, w, h;
     /*get the width and height of the img element*/
     w = img.offsetWidth;
-    
+    h = img.offsetHeight;
     /*set the width of the img element to 50%:*/
     img.style.width = (w / 2) + "px";
    
