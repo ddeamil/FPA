@@ -5033,7 +5033,7 @@ div[class^='highlight'] pre {
 
 .wy-menu-vertical a {
     display: inline-block;
-    background-color: #11113A;
+    
 
     line-height: 18px;
     padding: 0.4045em 1.618em;
@@ -5157,7 +5157,7 @@ div[class^='highlight'] pre {
     width: 300px;
     overflow: hidden;
     min-height: 100%;
-    background: #343131;
+    background: #11113A;
     z-index: 200
 }
 
