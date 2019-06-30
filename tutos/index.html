@@ -17,6 +17,33 @@
   
 
   <style>
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("img_girl.jpg");
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
     * {box-sizing: border-box;}
     
     .img-comp-container {
@@ -77,17 +104,13 @@
       }
       function compareImages(img) {
         var slider, img, clicked = 0, w, h;
+        
         /*get the width and height of the img element*/
         w = img.offsetWidth;
         h = img.offsetHeight;
+
         /*set the width of the img element to 50%:*/
         img.style.width = (w / 2) + "px";
-
-
- /*set the height of the img element to 100%:*/
- img.style.height = (h / 1) + "px";
-
-
 
         /*create slider:*/
         slider = document.createElement("DIV");
