@@ -5077,7 +5077,7 @@ div[class^='highlight'] pre {
     margin: auto auto 0.809em auto;
     height: 45px;
     width: 45px;
-    background-color: #2980B9;
+    background-color: #11113A;
     padding: 5px;
     border-radius: 100%
 }
@@ -5193,8 +5193,7 @@ div[class^='highlight'] pre {
     margin-right: 12px;
     height: 45px;
     width: 45px;
-    background: #11113A;
-
+    background-color: #2980B9;
     padding: 5px;
     border-radius: 100%
 }
