@@ -27,6 +27,44 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
+
+<style>  .collapsible {
+    background-color: #343131;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #6AB0DE;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color:#E7F2FA;
+  }</style>
+
+
  
 </head>
 
@@ -214,6 +252,45 @@
   </div>
 
 
+
+  <h2 id="Compétences transversales"><font color="#2980B9">Compétences transversales</font></h2>
+
+  <button class="collapsible"><b>Infos :</b></button>
+
+
+<div class="content">
+    <ul> 
+        <li> <p>&#128198;   &nbsp;&nbsp;49 ans</p>  </li>
+        
+           <li>  <p>&#128664;   &nbsp;&nbsp;Permis B</p> </li>
+        
+           <li> <p>&#128242;  &nbsp;&nbsp;06 50 58 32 23</p></li>
+      
+      
+           <li><p>&#128231; &nbsp;&nbsp;<a href="mailto:desmonddeamil@gmail.com">desmonddeamil@gmail.com</a></p></li>
+       
+              <li>  <p>&#127978;     &nbsp;&nbsp;Disponible sur <b>Paris</b> et sa couronne.</p> </li>
+      
+          </p></li>
+         
+           </ul></div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 id="Bienvenue"><font color="#2980B9">Moi formateur !</font></h2>
 
       <p><i><strong>Ma mission de formateur</strong> s'inscrit dans une démarche d'accompagnement individualisé et l'utilisation de méthodes pédagogiques expérientielles modernes, ludiques et actives afin de mobiliser l'apprenant et ainsi co-construire son apprentissage et assurer sa montée en compétence..</i></p>
@@ -290,6 +367,31 @@
     <script>var base_url = '.';</script>
     <script src="js/theme.js" defer></script>
       <script src="search/main.js" defer></script>
+
+
+
+      <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.maxHeight){
+                content.style.maxHeight = null;
+              } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+              } 
+            });
+          }
+          </script>
+
+
+
+
+
+
 
 </body>
 </html>
