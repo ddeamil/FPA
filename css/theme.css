@@ -5045,7 +5045,7 @@ div[class^='highlight'] pre {
 }
 
 .wy-menu-vertical a:hover {
-    background-color: #4e4a4a;
+    background-color: #2980B9;
     cursor: pointer
 }
 
@@ -5057,7 +5057,7 @@ div[class^='highlight'] pre {
 
 .wy-side-nav-search {
     z-index: 200;
-    background-color: #2980B9;
+    background-color: #11113A;
     text-align: center;
     padding: 0.809em;
     display: block;
