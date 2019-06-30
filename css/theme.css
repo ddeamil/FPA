@@ -5193,7 +5193,8 @@ div[class^='highlight'] pre {
     margin-right: 12px;
     height: 45px;
     width: 45px;
-    background-color: #2980B9;
+    background: #11113A;
+
     padding: 5px;
     border-radius: 100%
 }
