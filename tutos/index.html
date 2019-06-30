@@ -129,9 +129,9 @@
           /*get the x positions of the image:*/
           a = img.getBoundingClientRect();
           /*calculate the cursor's x coordinate, relative to the image:*/
-          x = e.pageX - a.left;
+          x = e.divX - a.left;
           /*consider any page scrolling:*/
-          x = x - window.pageXOffset;
+          x = x - window.divXOffset;
           return x;
         }
         function slide(x) {
