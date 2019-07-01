@@ -31,10 +31,33 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
+<script>(function() {
+    var mX, distance;
+    var $e  = $('.image-left');
+    var offset = $e.offset();
+    
+    $( window ).resize(function() {
+      offset = $e.offset();
+    });
+  
+    function calculateDistance(elem, mouseX) {
+      return (mouseX - elem.left);
+    }
+    
+    
+     $(document).mousemove(function(e) {  
+      mX = e.pageX;
+      distance = calculateDistance(offset, mX);
+      $(".bar").css("left", distance);
+      $(".image-left").css("width", distance);
+    });
+    
+  })();</script>
 
 
+<style>@import "compass/css3";
 
-<style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:300,400,900);
     
     $dark: rgba(0,0,0, 0.87);
     $light: #fff;
@@ -58,6 +81,7 @@
     }
     
     .image-left {
+      background: url(https://github.com/ddeamil/FPA/blob/master/img/Trombone_table.png) no-repeat;
       background-size: 40em;
       position: absolute;
       z-index: 1000;
@@ -66,6 +90,7 @@
     }
     
     .image-right {
+      background: url(https://github.com/ddeamil/FPA/blob/master/img/Trombone_table_wire_web.png) no-repeat;
       position: absolute;
       background-size: 40em;
       width: 100%;
@@ -200,8 +225,8 @@
         <p>(scrub)</p>
         
         <div class="image">
-          <div class="image-left"><img src="../img/Trombone_table.png" /></div>
-          <div class="image-right"><img src="../img/Trombone_table_wire_web.png" /></div>
+          <div class="image-left"></div>
+          <div class="image-right"></div>
           <div class="bar"></div>
         </div>
       </div>
@@ -275,30 +300,5 @@ docs/
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
 
-
-      <script>
-      (function() {
-    var mX, distance;
-    var $e  = $('.image-left');
-    var offset = $e.offset();
-    
-    $( window ).resize(function() {
-      offset = $e.offset();
-    });
-  
-    function calculateDistance(elem, mouseX) {
-      return (mouseX - elem.left);
-    }
-    
-    
-     $(document).mousemove(function(e) {  
-      mX = e.pageX;
-      distance = calculateDistance(offset, mX);
-      $(".bar").css("left", distance);
-      $(".image-left").css("width", distance);
-    });
-    
-  })();
-      </script>
 </body>
 </html>
