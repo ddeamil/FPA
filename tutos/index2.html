@@ -31,102 +31,52 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
-<script src:="../js/jquery.event.move.js"></script>
-<script src:="../js/jquery.twentytwenty.js"></script>
+
 
 
 <style>
-.twentytwenty-horizontal .twentytwenty-after-label:before {
-  right: 10px; }
+/**
+ * Image slider with pure CSS
+ * Original version in http://demosthenes.info/blog/css
+ * Copied from http://lea.verou.me/2014/07/image-comparison-slider-with-pure-css/
+ */
 
-.twentytwenty-vertical .twentytwenty-before-label:before {
-  top: 10px; }
+ .image-slider {
+	position:relative;
+	display: inline-block;
+	line-height: 0;
+}
 
-.twentytwenty-vertical .twentytwenty-after-label:before {
-  bottom: 10px; }
+/* Could use a pseudo-element, but they’re currently
+   super buggy. See: http://dabblet.com/gist/ab432c3f6a8f672cd077 */
+.image-slider > div {
+	position: absolute;
+	top: 0; bottom: 0; left: 0;
+	width: 150px;
+	max-width: 100%;
+	overflow: hidden;
+	resize: horizontal;
+}
 
-.twentytwenty-overlay {
-  -webkit-transition-property: background;
-  -moz-transition-property: background;
-  transition-property: background;
-  background: rgba(0, 0, 0, 0);
-  z-index: 25; }
-  .twentytwenty-overlay:hover {
-    background: rgba(0, 0, 0, 0.5); }
-    .twentytwenty-overlay:hover .twentytwenty-after-label {
-      opacity: 1; }
-    .twentytwenty-overlay:hover .twentytwenty-before-label {
-      opacity: 1; }
+/* Cross-browser resizer styling */
+.image-slider > div:before {
+	content: '';
+	position: absolute;
+	right: 0; bottom: 0;
+	width: 13px; height: 13px;
+	padding: 10px;
+	background: linear-gradient(-45deg, white 50%, transparent 0);
+	background-clip: content-box;
+	cursor: ew-resize;
+	-webkit-filter: drop-shadow(0 0 2px black);
+	filter: drop-shadow(0 0 2px black);
+}
 
-.twentytwenty-before {
-  z-index: 20; }
+.image-slider img {
+	user-select: none;
+	max-width: 400px;
+}
 
-.twentytwenty-after {
-  z-index: 10; }
-
-.twentytwenty-handle {
-  height: 38px;
-  width: 38px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -22px;
-  margin-top: -22px;
-  border: 3px solid white;
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
-  border-radius: 1000px;
-  -webkit-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
-  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
-  z-index: 40;
-  cursor: pointer; }
-
-.twentytwenty-horizontal .twentytwenty-handle:before {
-  bottom: 50%;
-  margin-bottom: 22px;
-  -webkit-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5); }
-.twentytwenty-horizontal .twentytwenty-handle:after {
-  top: 50%;
-  margin-top: 22px;
-  -webkit-box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5); }
-
-.twentytwenty-vertical .twentytwenty-handle:before {
-  left: 50%;
-  margin-left: 22px;
-  -webkit-box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5); }
-.twentytwenty-vertical .twentytwenty-handle:after {
-  right: 50%;
-  margin-right: 22px;
-  -webkit-box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
-  box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5); }
-
-.twentytwenty-left-arrow {
-  border-right: 6px solid white;
-  left: 50%;
-  margin-left: -17px; }
-
-.twentytwenty-right-arrow {
-  border-left: 6px solid white;
-  right: 50%;
-  margin-right: -17px; }
-
-.twentytwenty-up-arrow {
-  border-bottom: 6px solid white;
-  top: 50%;
-  margin-top: -17px; }
-
-.twentytwenty-down-arrow {
-  border-top: 6px solid white;
-  bottom: 50%;
-  margin-bottom: -17px; }
 
 
 
@@ -245,14 +195,15 @@
 
             
 
-<div class="twentytwenty-wrapper twentytwenty-horizontal">
-  <div class="twentytwenty-container" style="height: 366.656px;">
-    <img src="../img/01-celine-skowron-before.jpg" class="twentytwenty-before" style="clip: rect(0px, 271.546px, 366.656px, 0px);">
-    <img src="../img/01-celine-skowron-after.jpg" class="twentytwenty-after" style="clip: rect(0px, 533.328px, 366.656px, 271.546px);">
-  <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 271.546px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div>
-</div>
+
  
 
+<div class="image-slider">
+    <div>
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-before.jpg" />
+    </div>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/photoshop-face-after.jpg" />
+</div>
 
 
 
