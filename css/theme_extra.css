@@ -195,3 +195,14 @@ td, th {
    border-collapse: collapse;
 }
 
+.twentytwenty-container{
+  max-width: 800px;
+  margin: auto;
+
+
+
+
+  img{
+    max-width: 100%;
+  }
+}
