@@ -1,11 +1,2 @@
-$(".handle").draggable({
-  axis: "x",
-  containment: "parent",
-  drag: function() {
-    var position =
-   $(this).position();
-    var positionExtra = position.left + 6;
-    
-    $(".coverImage").width(positionExtra + "px");
-  }
-});
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
