@@ -1,3 +1,6 @@
+/*CSS Document */
+
+
 .container{
   max-width:900px;
   margin:auto;
@@ -17,7 +20,7 @@
 }
 
 #colored { 
-  background-image: url(https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg);
+  background-image: url(https://github.com/ddeamil/FPA/blob/master/img/Trombone_table.png?raw=true);
   position: absolute;
   top: 0; left: 0;
   height: 100%;
