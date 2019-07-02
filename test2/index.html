@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Before-After Slider using Beer Slider plugin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="stylesheet" href="BeerSlider.css">
+  <link rel="stylesheet" href="style.css">  
+  <script src="BeerSlider.js"></script>
+</head>
+<body>  
+  <div class="container">
+    <header>
+      <h1 class="heading-font">Image comparison</h1>
+      <h2>Responsive & Accessible Before-After Slider using Beer Slider plugin</h2>
+    </header>
+    <div id="compare" class="beer-slider" data-beer-label="before">
+      <img src="images/img1.jpg"  alt="before">
+      <div class="beer-reveal" data-beer-label="after">
+        <img src="images/img2.jpg"  alt="after">
+    </div>
+  </div>
+  
+  <!-- Add this to activte the slider -->
+  <script>
+    new BeerSlider( document.getElementById( "compare" ) );    
+  </script>
+
+</body>
+</html>
