@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {box-sizing: border-box;}
 
-
-  <link rel="stylesheet" type="text/css" href="test.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
-
-
-<script>
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
+.img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
 }
-</script>
 
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+</style>
+<script>
+-
+</script>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h1>Compare Two Images</h1>
 
-<p id="demo">A Paragraph.</p>
-
-<button type="button" onclick="myFunction()">Try it</button>
-
-<br>
-<br>	
-
-<section>
-
+<p>Click and slide the blue slider to compare two images:</p>
 
 <div class="img-comp-container">
   <div class="img-comp-img">
-    <img src="../img/01-celine-skowron-after.jpg" width="300" height="200">
+    <img src="img_snow.jpg" width="300" height="200">
   </div>
   <div class="img-comp-img img-comp-overlay">
-    <img src="../img/01-celine-skowron-before.jpg" width="300" height="200">
+    <img src="img_forest.jpg" width="300" height="200">
   </div>
 </div>
 
-
-</section>
-
-
-<footer>
-	
-
-
-</footer>
-
-<script src="test.js"></script>
-
-
-
-
-
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
 
 </body>
 </html>
