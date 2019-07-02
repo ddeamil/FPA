@@ -1,68 +1,47 @@
-/*CSS Document */
 
-
-@import "lesshat";
-
-.ba-slider {
-    position: relative;
-    overflow: hidden;
-}
- 
-.ba-slider img {
-    width: 100%;
-    display:block;
-}
- 
-.resize {
-    position: absolute;
-    top:0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    overflow: hidden;
+.container {
+  width: 500px;
+  height: 370px;
+  border: 1px solid #fff;
+  position: relative;
+  margin: auto;
 }
 
-
-.handle { /* Thin line seperator */
-  position:absolute; 
-  left:50%;
-  top:0;
-  bottom:0;
-  width:4px;
-  margin-left:-2px;
- 
-  background: rgba(0,0,0,.5);
-  cursor: ew-resize;
-}
- 
-.handle:after {  /* Big orange knob  */
-    position: absolute;
-    top: 50%;
-    width: 64px;
-    height: 64px;
-    margin: -32px 0 0 -32px;
- 
-    content:'\21d4';
-    color:white;
-    font-weight:bold;
-    font-size:36px;
-    text-align:center;
-    line-height:64px;
- 
-    background: #ffb800; /* @orange */
-    border:1px solid #e6a600; /* darken(@orange, 5%) */
-    border-radius: 50%;
-    transition:all 0.3s ease;
-    box-shadow:
-      0 2px 6px rgba(0,0,0,.3), 
-      inset 0 2px 0 rgba(255,255,255,.5),
-      inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/ 
+.container img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 
-.draggable:after {
-    width: 48px;
-    height: 48px;
-    margin: -24px 0 0 -24px;
-    line-height:48px;
-    font-size:30px;
+.coverImage {
+  position: absolute;
+  background: url("https://www.dropbox.com/s/t96792sp9ab2r8m/IMG_0280.PNG?raw=1");
+  background-size: auto 100%;
+  width: 40%;
+  height: 100%;
+}
+
+.handle {
+  width: 0px;
+  height: 100%;
+  border-left: 5px solid #fff;
+  position: absolute;
+  left: 40%;
+}
+
+.handle:after {
+  content:"";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  color: #999;
+  line-height: 60px;
+  font-weight: 300;
+  text-align: center;
+  background: #fff;
+  position: absolute;
+  left: -20px; top: 0; bottom: 0;
+  margin: auto;
 }
