@@ -1,0 +1,30 @@
+.container{
+  max-width:900px;
+  margin:auto;
+}
+
+#inked-painted { 
+  position: relative;
+  font-size: 0; 
+  -ms-touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+#inked-painted img { 
+  width: 100%;
+  height: auto; 
+}
+
+#colored { 
+  background-image: url(https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg);
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 50%;
+  background-size: cover; 
+}
+
+#inked-painted:hover {
+  cursor: col-resize; 
+}
