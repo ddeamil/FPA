@@ -34,23 +34,35 @@ function myFunction() {
 <section>
 
 
-<div class="container">
- 
-   <img src="https://www.dropbox.com/s/0fwcapymrdywbre/IMG_0281.PNG?raw=1" class="image1">
-
-  <div class="coverImage"></div>
-  <div class="handle"></div>
+<div class="img-comp-container">
+  <div class="img-comp-img">
+    <img src="../img/01-celine-skowron-after.jpg" width="300" height="200">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="../img/01-celine-skowron-before.jpg" width="300" height="200">
+  </div>
 </div>
+
 
 </section>
 
 
 <footer>
 	
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-<script src="test.js"></script>
 
 
 </footer>
+
+<script src="test.js"></script>
+
+
+
+<script>
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+</script>
+
+
+
 </body>
 </html>

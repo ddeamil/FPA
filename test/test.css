@@ -1,47 +1,30 @@
+* {box-sizing: border-box;}
 
-.container {
-  width: 500px;
-  height: 370px;
-  border: 1px solid #fff;
+.img-comp-container {
   position: relative;
-  margin: auto;
+  height: 200px; /*should be the same height as the images*/
 }
 
-.container img {
-  height: 100%;
-  object-fit: cover;
+.img-comp-img {
   position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
 }
 
-.coverImage {
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+}
+
+.img-comp-slider {
   position: absolute;
-  background: url("https://www.dropbox.com/s/t96792sp9ab2r8m/IMG_0280.PNG?raw=1");
-  background-size: auto 100%;
-  width: 40%;
-  height: 100%;
-}
-
-.handle {
-  width: 0px;
-  height: 100%;
-  border-left: 5px solid #fff;
-  position: absolute;
-  left: 40%;
-}
-
-.handle:after {
-  content:"";
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #eee;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
   border-radius: 50%;
-  color: #999;
-  line-height: 60px;
-  font-weight: 300;
-  text-align: center;
-  background: #fff;
-  position: absolute;
-  left: -20px; top: 0; bottom: 0;
-  margin: auto;
 }
