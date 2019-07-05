@@ -101,6 +101,39 @@
 }</style>
 
 
+<style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #FFFF;
+    }
+    
+    th, td {
+      text-align: center;
+      padding: 16px;
+    
+    }
+    
+    th:first-child, td:first-child {
+      text-align: left;
+      
+    }
+    
+    tr:nth-child(even) {
+      background-color: #FFFF
+      
+    }
+    
+    .fa-check {
+      color: green;
+    }
+    
+    .fa-remove {
+      color: red;
+    }
+    </style>
+
 
 
 </head>
@@ -261,61 +294,46 @@
 <div class="content">
 
     <p>Mon ecclectisme et mon imagination me servent à m'adapter au mieux aux différentes attentes !</p>
+    <table>
+        <tr>
+          <th style="width:70%">LOGICIELS</th>
+          <th>Open source</th>
+          <th>Gratuit</th>
+              <th>Version payante</th>
+        </tr>
     
-    <div class="row">
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>1</h2>
-          <p>Ecoute Active</p>
-          <p>Congruence / Adaptabilité</p>
-          <p>Relationnel</p>
-          <p>Autonomie</p>
-        </div>
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>2</h2>
-
-          <p><span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span></p>
-
-            <p><span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span></p>
-
-              <p><span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span></p>
-
-                <p><span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span></p>
-
-        </div>
-      </div>
-
-       
-
-    <div class="row">
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>Savoirs</h2>
-          <p>Some text..</p>
-        </div>
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>Savoir faire</h2>
-          <p>Some text..</p>
-        </div>
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>Savoir être</h2>
-          <p>Mes bibles en la matière: </p>
-        </div>
-      </div>
+        <tr>
+          <td><div class="container" >
+              <a href="https://www.gimp.org/">
+                <img  src="../img/GIMP_Icon.svg" alt="dess" style="width:45px;height:45px;border:0" class="image">
+                
+              </a>
+              <div class="middle">
+                  <div class="text"><b>GIMP</b></div>
+              </div>
+              </div></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-check"></i></td>
+              <td><i class="fa fa-remove"></i></td>
+        </tr>
+    
+    
+        <tr>
+            <td><div class="container">
+                <a href="https://inkscape.org/fr/">
+                  <img src="../img/inkscape-logo.svg" alt="dess"style="width:45px;height:45px;border:0" class="image">
+                  
+                </a>
+                <div class="middle">
+                    <div class="text"><b>Inskape</b></div>
+                </div>
+                </div></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-remove"></i></td>
+          </tr>
+        
+      </table>
 
 
 
@@ -326,33 +344,7 @@
 <div class="content">
 
 
-    <div class="row">
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>Savoirs</h2>
-          <p>Some text..</p>
-
-          <ul> 
-              <li> Concevoir un site web à l'aide du générateur de site statique MKdocs </li>
-              <li> Réaliser un site web à l'aide de l'outils en ligne WordPress </li>
-              <li> Former et accompagner les apprenants dans des parcours individualisés. </li>
-                
-                 <b>Mes bibles en la matière: </b>
-               
-                    <li> A </li> 
-                    <li> B</li>
-                    <li> C </li>
-                       </ul>
-
-        </div>
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>Savoir faire</h2>
-          <p>Some text..</p>
-        </div>
-        <div class="column" style="background-color:#FCFCFC;">
-          <h2>Savoir être</h2>
-          <p>Mes bibles en la matière: </p>
-        </div>
-      </div>
+    
     
 </div>
 <button class="collapsible">Présentation</button>
