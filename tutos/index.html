@@ -6,65 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-
-
-  <style>
- * {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-    .img-comp-container {
-
-      max-width: 960px;
-	margin: 0 auto;
-	padding: 0 0.75rem;
-
-
-      position: relative;
-      height: 701px; /*should be the same height as the images*/
-      
-    }
-    
-    .img-comp-img {
-      position: absolute;
-      width: auto;
-      height: auto;
-      overflow:hidden;
-    }
-    
-    .img-comp-img img {
-      display:block;
-      vertical-align:middle;
-
-    }
-    
-    .img-comp-slider {
-      position: absolute;
-      z-index:9;
-      cursor: ew-resize;
-      /*set the appearance of the slider:*/
-      width: 40px;
-      height: 40px;
-      background-color: #FF7314;
-      opacity: 0.7;
-      border-radius: 50%;
-    }
-    </style>
-
-
-
-
-
-
-
-
-
-
   
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>CV - D.de AMIL - FPA</title>
@@ -85,87 +26,77 @@ body {
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
+
+
+
+
+
+
+  <style>.collapsible {
+    background-color: #11113A;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
   
-  <script>
-    function initComparisons() {
-      var x, i;
-      /*find all elements with an "overlay" class:*/
-      x = document.getElementsByClassName("img-comp-overlay");
-      for (i = 0; i < x.length; i++) {
-        /*once for each "overlay" element:
-        pass the "overlay" element as a parameter when executing the compareImages function:*/
-        compareImages(x[i]);
-      }
-      function compareImages(img) {
-        var slider, img, clicked = 0, w, h;
-        /*get the width and height of the img element*/
-        w = img.offsetWidth;
-        h = img.offsetHeight;
-        /*set the width of the img element to 50%:*/
-        img.style.width = (w / 2) + "px";
-        /*create slider:*/
-        slider = document.createElement("DIV");
-        slider.setAttribute("class", "img-comp-slider");
-        /*insert slider*/
-        img.parentElement.insertBefore(slider, img);
-        /*position the slider in the middle:*/
-        slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-        slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
-        /*execute a function when the mouse button is pressed:*/
-        slider.addEventListener("mousedown", slideReady);
-        /*and another function when the mouse button is released:*/
-        window.addEventListener("mouseup", slideFinish);
-        /*or touched (for touch screens:*/
-        slider.addEventListener("touchstart", slideReady);
-        /*and released (for touch screens:*/
-        window.addEventListener("touchstop", slideFinish);
-        function slideReady(e) {
-          /*prevent any other actions that may occur when moving over the image:*/
-          e.preventDefault();
-          /*the slider is now clicked and ready to move:*/
-          clicked = 1;
-          /*execute a function when the slider is moved:*/
-          window.addEventListener("mousemove", slideMove);
-          window.addEventListener("touchmove", slideMove);
-        }
-        function slideFinish() {
-          /*the slider is no longer clicked:*/
-          clicked = 0;
-        }
-        function slideMove(e) {
-          var pos;
-          /*if the slider is no longer clicked, exit this function:*/
-          if (clicked == 0) return false;
-          /*get the cursor's x position:*/
-          pos = getCursorPos(e)
-          /*prevent the slider from being positioned outside the image:*/
-          if (pos < 0) pos = 0;
-          if (pos > w) pos = w;
-          /*execute a function that will resize the overlay image according to the cursor:*/
-          slide(pos);
-        }
-        function getCursorPos(e) {
-          var a, x = 0;
-          e = e || window.event;
-          /*get the x positions of the image:*/
-          a = img.getBoundingClientRect();
-          /*calculate the cursor's x coordinate, relative to the image:*/
-          x = e.pageX - a.left;
-          /*consider any page scrolling:*/
-          x = x - window.pageXOffset;
-          return x;
-        }
-        function slide(x) {
-          /*resize the image:*/
-          img.style.width = x + "px";
-          /*position the slider:*/
-          slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-        }
-      }
-    }
-    </script>
+  .active, .collapsible:hover {
+    background-color: #6AB0DE;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color:#E7F2FA;
+    
+  }</style>
 
+<style>
+* {
+  box-sizing: border-box;
+}
 
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+}</style>
 
 
 </head>
@@ -201,7 +132,7 @@ body {
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">tutos</a>
+    <a class="current" href="./">CV</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
@@ -274,30 +205,68 @@ body {
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs help</code> - Print this help message.</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
 
 
+<h2 id="Compétences transversales"><font color="#2980B9">Compétences transversales</font></h2>
 
-<h1>Compare Two Images</h1>
+<button class="collapsible">Personnalité & savoir être</button>
+<div class="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
-<p>Click and slide the blue slider to compare two images:</p>
-<section>
-<div class="img-comp-container">
-  <div class="img-comp-img">
-    <img src="../img/Trombone_table_wire_web2.png" width="480" height="701">
-    
-  </div>
-  <div class="img-comp-img img-comp-overlay">
-    <img src="../img/Trombone_table.png" width="480" height="701">
-    
+<button class="collapsible">Informatique</button>
+<div class="content">
+  <div class="row">
+    <div class="column" style="background-color:#aaa;">
+      <h2>Column 1</h2>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+      <h2>Column 2</h2>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+      <h2>Column 3</h2>
+      <p>Some text..</p>
+    </div>
   </div>
 </div>
-</section>
+<button class="collapsible">Présentation</button>
+<div class="content">
+  <ul> 
+      <li> PREZI Next & Classic. </li>
+      <li> Power Point. </li>
+      <li> Acrobat PDF PRO </li>
+      
+      
+         <li> Remédier aux difficultés individuelles d’apprentissage.</li>
+      
+         <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
+      
+         <li> Analyser ses pratiques professionnelles.</li>
+         </ul>
+</div>
+<button class="collapsible">3d</button>
+<div class="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
 
 
 
 
+
+
+
+
+
+
+<h2 id="project-layout">Project layout</h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+</code></pre>
               
             </div>
           </div>
@@ -346,9 +315,7 @@ body {
       <script src="../search/main.js" defer></script>
 
 
-      <script>
-        /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
-        initComparisons();
-        </script>  
+    
+
 </body>
 </html>
