@@ -146,8 +146,8 @@ dl {
 }
 
 li {
-    list-style: square;
-    background: #11113A;
+    list-style: none
+    list-style-type: square;
 }
 
 dd {
