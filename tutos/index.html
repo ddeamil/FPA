@@ -543,9 +543,6 @@
     
 
 <hr>
-<div>
-
-
 
 <ul id="myUL">
   <li><span class="caret"><b><font color="#ff6347">Mes fondamentaux en Ingénierie Pédagogique</font></b></span>
@@ -689,8 +686,6 @@
     </ul>
   </li>
 </ul>
-
-</div>
 <hr>
 
 
@@ -891,7 +886,7 @@ For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
     
     for (i = 0; i < toggler.length; i++) {
       toggler[i].addEventListener("click", function() {
-        this.parentElement.querySelector(".nested").classList.toggle("activeT");
+        this.parentElement.querySelector(".nested").classList.toggle("active");
         this.classList.toggle("caret-down");
       });
     }
