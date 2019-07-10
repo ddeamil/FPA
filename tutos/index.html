@@ -205,7 +205,7 @@
      
     }
     
-    .active {
+    .activeT {
       display: block;
      
 
@@ -896,7 +896,7 @@ For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
     
     for (i = 0; i < toggler.length; i++) {
       toggler[i].addEventListener("click", function() {
-        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.parentElement.querySelector(".nested").classList.toggle("activeT");
         this.classList.toggle("caret-down");
       });
     }
