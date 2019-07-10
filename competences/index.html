@@ -33,10 +33,38 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
+
+  
+
+
+
+
+
   <style>
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  background-color: #FCFCFC;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: #FCFCFC;
+  border: 0px solid black;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+
       .checked {
-        color: orange;
+        color: #ff6347;
       }
+
+
 
 
       .collapsible {
@@ -75,11 +103,119 @@
       background-color:#FCFCFC;
     }
 
-
-
-
-
       </style>
+
+
+<style>/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+   /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}</style>
+
+
+<style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #FFFF;
+    }
+    
+    th, td {
+      text-align: center;
+      padding: 16px;
+    
+    }
+    
+    th:first-child, td:first-child {
+      text-align: left;
+      
+    }
+    
+    tr:nth-child(even) {
+      background-color: #FFFF
+      
+    }
+    
+    .fa-check {
+      color: green;
+    }
+    
+    .fa-remove {
+      color: red;
+    }
+    </style>
+
+
+<style>
+
+ul, #myUL {
+  list-style-type: none;
+
+}
+
+    #myUL {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+    }
+    
+    .caret {
+      cursor: pointer;
+      -webkit-user-select: none; /* Safari 3.1+ */
+      -moz-user-select: none; /* Firefox 2+ */
+      -ms-user-select: none; /* IE 10+ */
+      user-select: none;
+    
+    }
+    
+    .caret::before {
+      content: "\25BA";
+      color: #ff6347;
+      display: inline-block;
+      margin-right: 6px;
+   
+    }
+    
+    .caret-down::before {
+      -ms-transform: rotate(90deg); /* IE 9 */
+      -webkit-transform: rotate(90deg); /* Safari */'
+      transform: rotate(90deg);
+   
+    }
+    
+    .nested {
+      display: none;
+    background-color:#FCFCFC;
+    list-style-type: none;
+
+    }
+    
+    .active {
+      display: block;
+    }
+    </style>
+
+
+
+
 
 </head>
 
@@ -179,7 +315,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="Formateur Professionnel d'Adultes"><font color="#2980B9">Formateur Professionnel d'Adultes</font></h1>
+                <h2id="Formateur Professionnel d'Adultes"><font color="#2980B9">Formateur Professionnel d'Adultes</font></h2>
 
 
 
@@ -187,7 +323,7 @@
 
 <br />
 <h3 id="requirements">Activités types :</h3></p>
-<h2 id="Activité type 1"><font color="#2980B9">Activité type 1</font></h2>
+<h4 id="Activité type 1"><font color="#2980B9">Activité type 1</font></h4>
 
 
 
@@ -213,7 +349,7 @@
 </div>
 
 
-<h2 id="Activité type 2"><font color="#2980B9">Activité type 2</font></h2>
+<h4 id="Activité type 2"><font color="#2980B9">Activité type 2</font></h4>
 
 <div class="admonition note">
 <p class="admonition-title">Construire des parcours individualisés et accompagner les apprenants</p>
@@ -233,29 +369,163 @@
 </div>
 
 
-  <h2 id="Compétences transversales"><font color="#2980B9">Compétences transversales</font></h2>
+  <h3 id="Compétences transversales"><font color="#2980B9">Compétences transverses & transversales</font></h3>
 
-  <button class="collapsible">Personnalité & savoir être</button>
+  <button class="collapsible"><b>Personnalité & savoir être</b></button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</br>
+    <b>Ecclectique et imaginatif je m'adapte au mieux aux différentes situations et attentes !</b>
+  </br>  
+</br>      
+   
+
+
+<div class="grid-container">
+    <div>Ecoute active</div>
+    <div>
+    <a><span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span></a>
+    </div>
+    <div>Congruence - Adaptabilité</div>  
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span></a>
+    </div>
+    <div>Réactivité</div>  
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span></a>
+    </div>
+    <div>Travail collaboratif</div>  
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span></a>
+    </div>
+    <div>Encadrement - supervision </div>  
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span></a>
+    </div>
+    <div>Créativité, sens de l'innovation</div>
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span></a>
+
+    </div>
+    <div>Capacité concentrationnelle</div>
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span></a>
+        </div>
+    <div>Sens relationnel</div>
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span></a>
+    </div>
+    <div>Autonomie</div>
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span></a>
+
+    </div>
+    <div>Capacité à maîtriser ses émotions</div>
+    <div>
+        <a><span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span></a>
+    </div>
+    <div>capacité à travailler sous pression</div>
+    <div>
+        <a><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span></a>
+    </div>
+  </div>
+  
+        
+
+
+
+
 </div>
 
-<button class="collapsible">Informatique</button>
+<button class="collapsible"><b>Informatique & bureautique</b></button>
 <div class="content">
-    <ul> 
-        <li> Concevoir l’ingénierie et les outils d’individualisation des parcours en utilisant les technologies numériques. </li>
-        <li> Accueillir les apprenants en formation et co-construire leurs parcours. </li>
-        <li> Former et accompagner les apprenants dans des parcours individualisés. </li>
-        
-        
-           <li> Remédier aux difficultés individuelles d’apprentissage.</li>
-        
-           <li> Accompagner les apprenants dans la consolidation de leur projet professionnel.</li>
-        
-           <li> Analyser ses pratiques professionnelles.</li>
-           </ul>
+
+    <b>Responsive Three Column Layout</b>
+    <p>Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide).</p>
+    
+    <div class="row">
+      <div class="column" style="background-color:#FCFCFC;">
+        <h4>Savoir cognitif</h4>
+        <ul>
+          <li><b>HTML5</b></li>
+          <li>CSS3</li>
+          <li>compétences en bureautique</li>
+          <li>HTML5</li>
+          <li>HTML5</li>
+          <li>HTML5</li>
+        </ul>
+        <p>Some text..</p>
+      </div>
+
+
+
+      <div class="column" style="background-color:#FCFCFC;">
+        <h4>Savoir faire</h4>
+        <ul>
+            <li>Lire interpréter et rédiger en HTML5</li>
+            <li>Lire interpréter et rédiger du CSS</li>
+            <li>Réaliser un site web static avec MKdocs</li>
+            <li>Créer un site avec l'outil WordPress</li>
+            <li>HTML5</li>
+            <li>HTML5</li>
+            <li>HTML5</li>
+          </ul>
+        <p>Some text..</p>
+      </div>
+
+
+      <div class="column" style="background-color:#FCFCFC;">
+        <h4>Savoir être</h4>
+        <p>Some text..</p>
+      </div>
+    </div>
+    
+    
 </div>
-<button class="collapsible">Présentation</button>
+<button class="collapsible"><b>Présentation</b></button>
 <div class="content">
     <ul> 
         <li> PREZI Next & Classic. </li>
@@ -270,7 +540,7 @@
            <li> Analyser ses pratiques professionnelles.</li>
            </ul>
 </div>
-<button class="collapsible">3d</button>
+<button class="collapsible"><b>3d</b></button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
@@ -278,20 +548,157 @@
 
     
 
+<hr>
+
+<ul id="myUL">
+  <li style="list-style-type:none"><span class="caret"><b><font color="#ff6347">Mes fondamentaux en Ingénierie Pédagogique</font></b></span>
+    <ul class="nested">
+    
+    
+    <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Pédagogie Expérientielle</font></b></span>
+        <ul class="nested">
+          <li>Nous retenons 90% de ce que nous voyons, entendons, disons et faisons.</li>
+          <li>Mettre l'apprenant au centre de son apprentissage.</li>
+          <li style="list-style-type:none"><span class="caret">Les 4 phases d'apprentissage <i>(cf: David.KOLB)</i></span>
+            <ul class="nested">
+              <li>Expérience</li>
+              <li>Explicitation</li>
+              <li>Explication</li>
+              <li>Expérimentation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>  
+    
+    
+    <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Pédagogie Différenciée</font></b></span>
+        <ul class="nested">
+          <li>Nous apprenons tous de façon différente.</li>
+          <li>Adapter la pédagogie à l'apprenant dans un soucis d'accompagnement personnalisé.</li>
+          <li style="list-style-type:none"><span class="caret">Impliquer et valoriser l'apprenant dans son apprentissage</span>
+            <ul class="nested">
+              <li>Pédagogie de projet</li>
+              
+            </ul>
+          </li>
+        </ul>
+      </li>  
+    
+    <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Co-constructivisme</font></b></span>
+        <ul class="nested">
+          <li>Privilégier une horizontalité des rapports</li>
+          <li>L'apprenant doit être l'Acteur Principale de son apprentissage</li>
+          <li style="list-style-type:none"><span class="caret">Démarches Inductives</span>
+            <ul class="nested">
+              <li>méthode  ACTIVE</li>
+              <li>méthode  INTERROGATIVE</li>
+              <li>méthode  DEMONSTRATIVE - Découverte</li>
+      
+            </ul>
+          </li> 
+          
+        </ul>
+      </li>  
+      
+      
+      
+      <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Mon rôle</font></b></span>
+        <ul class="nested">
+          <li>Facilitateur des apprentissages</li>
+          <li>Régulateur</li>
+          <li style="list-style-type:none"><span class="caret">Accompagnateur</span>
+            <ul class="nested">
+              <li>(cf: travaux de Maëlla Paul doctoresse en science de l'éducation)</li>
+             
+            </ul>
+          </li>
+        </ul>
+      </li>  
+    
+    
+    
+    
+    <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Définir mes Objectifs</font></b></span>
+        <ul class="nested">
+          <li>Aquisition de Savoirs: Cognitifs - Faire - Comportemental</li>
+          <li>Rechercher l'Opérationnalité au terme de l'activité d'apprentissage</li>
+          <li style="list-style-type:none"><span class="caret">S.M.A.R.T
+            <ul class="nested">
+              <li>Spécifique</li>
+              <li>Mesurable</li>
+              <li>Atteignable</li>
+              <li>Réaliste</li>
+              <li>Temporellement défini</li>
+            </ul>
+          </li>
+          
+           <li style="list-style-type:none"><span class="caret">3C
+            <ul class="nested">
+              <li>Comportement Observable</li>
+              <li>Condition de réalisation</li>
+              <li>Critère d'évaluation</li>
+            
+            </ul>
+          </li>
+          
+          
+          
+        </ul>
+      </li>  
+    
+    
+     <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Adaptabilité</font></b></span>
+        <ul class="nested">
+          <li>Congruence</li>
+          <li>Adaptabilité</li>
+          <li style="list-style-type:none"><span class="caret">Substituabilité</span>
+            <ul class="nested">
+              <li>Prévoir / anticiper</li>
+             
+            </ul>
+          </li>
+        </ul>
+      </li>  
+    
+    
+     <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Empathie</font></b></span>
+        
+        <ul class="nested">
+          <li>Acceptation et Respect d'autrui</li>
+          <li>Adaptabilité</li>
+          <li style="list-style-type:none"><span class="caret">Acceptation et Respect d'autrui</span>
+            <ul class="nested">
+              <li>Se mettre au niveau - horizontalité des rapports </li>
+             
+            </ul>
+          </li>
+        </ul>
+      </li> 
+    
+    
+     <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">La reformulation</font></b></span>
+      
+        <ul class="nested">
+          <li>(cf: Carl Rogers)</li>
+          <li>Reformuler et faire reformuler pour s'assurer de la bonne compréhension.</li>
+          <li style="list-style-type:none"><span class="caret"><b><font color="#2980B9">Explicitation</font> </b>(cf: Pierre Vermersch)</span>
+            <ul class="nested">
+              <li>L'entretien d'explicitation</li>
+             
+            </ul>
+          </li>
+        </ul>
+      </li>  
+    </ul>
+  </li>
+</ul>
+<hr>
 
 
 
 
-
-
-
-
-
-
-
-
-<p><h2><font color="#2980B9">Pédagogie Expériencielle</font></h2>
-<i class="fa fa-chevron-circle-right" style="font-size:30px;color: #2980B9">Pédagogie Immersive grâce à la VR</i></p>
+<p><h2><font color="#2980B9">Projets à moyen terme :</font></h2>
+<i class="fa fa-chevron-circle-right" style="font-size:30px;color: #2980B9">Pédagogie Expérientielle Immersive </i></p>
 <div align="center">
 <svg width="500" height="450">
 
@@ -478,6 +885,21 @@ For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
             });
           }
           </script>
+
+<script>
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+    
+    for (i = 0; i < toggler.length; i++) {
+      toggler[i].addEventListener("click", function() {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+      });
+    }
+    </script>
+
+
+
 
 
 </body>
