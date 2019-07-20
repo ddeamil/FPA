@@ -148,6 +148,9 @@ body
 .cbp_tmicon-users:before {
 	content: "\e004";
 }
+.cbp_tmicon-cog:before {
+	content: "\e003";
+}
 
 
 
