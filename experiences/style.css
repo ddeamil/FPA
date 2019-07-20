@@ -153,9 +153,12 @@ body
 }
 
 .cbp_tmicon-pencil:before {
-	content: "*";
+	content: "\e00b";
 }
 
+.cbp_tmicon-article:before {
+	content: "\e00c";
+}
 
 
 .cbp_tmicon-screen:before {
