@@ -152,6 +152,10 @@ body
 	content: "\e003";
 }
 
+.cbp_tm-icon-pencil:before {
+	content: "e00b";
+}
+
 
 
 .cbp_tmicon-screen:before {
