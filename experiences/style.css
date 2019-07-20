@@ -143,6 +143,14 @@ body
 	content: "\e000";
 }
 
+}
+
+.cbp-tm-icon-users {
+	content: "\e004";
+}
+
+
+
 .cbp_tmicon-screen:before {
 	content: "\e001";
 }
