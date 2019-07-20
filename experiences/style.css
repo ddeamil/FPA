@@ -143,9 +143,9 @@ body
 	content: "\e000";
 }
 
-}
 
-.cbp-tm-icon-users {
+
+.cbp-tmicon-users:before {
 	content: "\e004";
 }
 
