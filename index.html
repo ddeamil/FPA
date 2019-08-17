@@ -33,7 +33,58 @@
   <script>hljs.initHighlightingOnLoad();</script> 
   
 
-<style>  .collapsible {
+<style>
+
+.notification {
+  background-color: #11113A;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.notification1{
+  background-color: #FF6347;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.notification:hover {
+  background: #2980B9;
+}
+
+.notification1:hover {
+  background: #FF6347;
+}
+
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #2980B9;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+  .collapsible {
     background-color: #11113A;
     color: white;
     cursor: pointer;
@@ -218,6 +269,40 @@
              </object>
                 </div>
 
+
+
+                <center>
+                    <h4><u><font color="#2980B9">Plan de navigation</font></u></h4>
+                    
+                    <a href=".." class="notification1">
+                      <span><font color="#fffff">Formation</font></span>
+                      <span class="badge"><font color="#fffff">1</font></span>
+                    </a>
+                    
+                    <a href="../competences/" class="notification">
+                      <span><font color="#fffff">Compétences</font></span>
+                      <span class="badge"><font color="#fffff">2</font></span>
+                    </a>
+                    
+                    <a href="../experiences/" class="notification">
+                      <span><font color="#fffff">Expérience</font></span>
+                      <span class="badge"><font color="#fffff">3</font></span>
+                    </a>
+                    
+                    </center>
+
+
+
+                    <br />
+
+
+
+
+
+
+
+
+
  <h4 id="Bienvenue"><font color="#2980B9">Bienvenue !</font></h4>
  <p>Vous recherchez un formateur ?</p>
  <p>Je vous remercie de l'attention que vous porterez à mon profil, 
@@ -331,14 +416,33 @@
    </ul>
   </div>
 
- 
-
-  <p>Pour plus d'informations je vous invite sur la page : <a href="https://ddeamil.github.io/FPA/competences/"><strong>mes compétences</strong></a>.</p>
 
 
 <br />
 
+<center>
+    <h4><u><font color="#2980B9">Plan de navigation</font></u></h4>
+    
+    <a href=".." class="notification1">
+      <span><font color="#fffff">Formation</font></span>
+      <span class="badge"><font color="#fffff">1</font></span>
+    </a>
+    
+    <a href="../competences/" class="notification">
+      <span><font color="#fffff">Compétences</font></span>
+      <span class="badge"><font color="#fffff">2</font></span>
+    </a>
+    
+    <a href="../experiences/" class="notification">
+      <span><font color="#fffff">Expérience</font></span>
+      <span class="badge"><font color="#fffff">3</font></span>
+    </a>
+    
+    </center>
 
+
+
+    <br />
 
 
 
