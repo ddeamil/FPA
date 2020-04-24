@@ -1,0 +1,463 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.1.46",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_lights_punctual"
+  ],
+  "extensionsRequired": [
+    "KHR_lights_punctual"
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "intensity": 3,
+          "type": "directional",
+          "name": "Light"
+        }
+      ]
+    }
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        1,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      },
+      "name": "Light_Orientation",
+      "rotation": [
+        -0.7071067690849304,
+        0,
+        0,
+        0.7071067690849304
+      ]
+    },
+    {
+      "children": [
+        0
+      ],
+      "name": "Light",
+      "rotation": [
+        0.28432321548461914,
+        0.1456831842660904,
+        -0.1180686354637146,
+        0.9402108788490295
+      ],
+      "translation": [
+        23.101402282714844,
+        20.99591064453125,
+        12.893157958984375
+      ]
+    },
+    {
+      "camera": 0,
+      "name": "Camera_Orientation",
+      "rotation": [
+        -0.7071067690849304,
+        0,
+        0,
+        0.7071067690849304
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "Camera",
+      "rotation": [
+        0.7095375061035156,
+        0.055671993643045425,
+        -0.05641473829746246,
+        0.7001960873603821
+      ],
+      "translation": [
+        23.28204345703125,
+        4.524296760559082,
+        106.87493896484375
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "Cube"
+    },
+    {
+      "mesh": 1,
+      "name": "Text",
+      "rotation": [
+        0.7071068286895752,
+        0,
+        0,
+        0.7071067094802856
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "name": "Camera",
+      "perspective": {
+        "yfov": 0.39959652046304894,
+        "zfar": 100000,
+        "znear": 0.10000000149011612
+      },
+      "type": "perspective"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 5,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 5,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 5,
+            "path": "scale"
+          }
+        }
+      ],
+      "name": "Action",
+      "samplers": [
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 11
+        },
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 12
+        },
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 13
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Material",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.01850022003054619,
+          0.28744083642959595,
+          0.29613831639289856,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cube",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "extras": {
+        "targetNames": [
+          "Key 1"
+        ]
+      },
+      "name": "Text",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "targets": [
+            {
+              "POSITION": 8,
+              "NORMAL": 9
+            }
+          ]
+        }
+      ],
+      "weights": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    }
+  ],
+  "images": [
+    {
+      "name": "Dokeos_Logo",
+      "uri": "DOKEOS_img0.jpg"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 205,
+      "max": [
+        10,
+        10,
+        10
+      ],
+      "min": [
+        -10,
+        -10,
+        -10
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 205,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 205,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 900,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 951,
+      "max": [
+        1.6970000267028809,
+        0.05999999865889549,
+        0.009000000543892384
+      ],
+      "min": [
+        0.07400000095367432,
+        -0.05999999865889549,
+        -0.6910000443458557
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 951,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 951,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5123,
+      "count": 1680,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 951,
+      "max": [
+        0,
+        0,
+        0
+      ],
+      "min": [
+        0,
+        0,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 951,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 22,
+      "max": [
+        0.9166666666666666
+      ],
+      "min": [
+        0.041666666666666664
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 22,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 22,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 22,
+      "type": "VEC3"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2460,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2460,
+      "byteOffset": 2460
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1640,
+      "byteOffset": 4920
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1800,
+      "byteOffset": 6560
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11412,
+      "byteOffset": 8360
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11412,
+      "byteOffset": 19772
+    },
+    {
+      "buffer": 0,
+      "byteLength": 7608,
+      "byteOffset": 31184
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3360,
+      "byteOffset": 38792
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11412,
+      "byteOffset": 42152
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11412,
+      "byteOffset": 53564
+    },
+    {
+      "buffer": 0,
+      "byteLength": 88,
+      "byteOffset": 64976
+    },
+    {
+      "buffer": 0,
+      "byteLength": 264,
+      "byteOffset": 65064
+    },
+    {
+      "buffer": 0,
+      "byteLength": 352,
+      "byteOffset": 65328
+    },
+    {
+      "buffer": 0,
+      "byteLength": 264,
+      "byteOffset": 65680
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "DOKEOS_data.bin",
+      "byteLength": 65944
+    }
+  ]
+}

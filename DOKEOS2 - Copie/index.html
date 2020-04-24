@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dokeos • A-Frame</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <meta name="description" content="Dokeos demo • A-Frame">
+  </head>
+  <body>
+    <a-scene>
+  <a-assets>
+<a-asset-items id="dokeos" src"assets/scene.gltf">
+
+</a-asset-items>
+
+  </a-assets>
+  a-entity <a-gltf-model="dokeos"></a-entity>
+    </a-scene>
+
+    <script>
+      if (BABYLON.Engine.isSupported()) {
+          var canvas = document.getElementById("renderCanvas");
+          var engine = new BABYLON.Engine(canvas, true);
+  
+          BABYLON.SceneLoader.Load("", "scene.babylon", engine, function (newScene) {
+              // Wait for textures and shaders to be ready
+              newScene.executeWhenReady(function () {
+                  // Attach camera to canvas inputs
+                  newScene.activeCamera.attachControl(canvas);
+  
+                  // Once the scene is loaded, just register a render loop to render it
+                  engine.runRenderLoop(function() {
+                      newScene.render();
+                  });
+              });
+          }, function (progress) {
+              // To do: give progress feedback to user
+          });
+      }
+  </script>
+
+
+  </body>
+</html>
