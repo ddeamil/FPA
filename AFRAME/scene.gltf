@@ -1,0 +1,408 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v1.1.46",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_lights_punctual"
+  ],
+  "extensionsRequired": [
+    "KHR_lights_punctual"
+  ],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "color": [
+            1,
+            1,
+            1
+          ],
+          "intensity": 3,
+          "type": "directional",
+          "name": "Light"
+        }
+      ]
+    }
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        1,
+        3,
+        4
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "extensions": {
+        "KHR_lights_punctual": {
+          "light": 0
+        }
+      },
+      "name": "Light_Orientation",
+      "rotation": [
+        -0.7071067690849304,
+        0,
+        0,
+        0.7071067690849304
+      ]
+    },
+    {
+      "children": [
+        0
+      ],
+      "name": "Light",
+      "rotation": [
+        0.28249919414520264,
+        0.36919787526130676,
+        -0.1511888951063156,
+        0.8723697662353516
+      ],
+      "translation": [
+        5.541664123535156,
+        21.216449737548828,
+        0.10490036010742188
+      ]
+    },
+    {
+      "camera": 0,
+      "name": "Camera_Orientation",
+      "rotation": [
+        -0.7071067690849304,
+        0,
+        0,
+        0.7071067690849304
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "Camera",
+      "rotation": [
+        0.7320842742919922,
+        0.10276352614164352,
+        -0.11333262920379639,
+        0.6638132333755493
+      ],
+      "translation": [
+        13.758158683776855,
+        -2.0297794342041016,
+        52.93428421020508
+      ]
+    },
+    {
+      "mesh": 0,
+      "name": "Cube",
+      "scale": [
+        1,
+        1,
+        0.344671368598938
+      ]
+    }
+  ],
+  "cameras": [
+    {
+      "name": "Camera",
+      "perspective": {
+        "yfov": 0.39959652046304894,
+        "zfar": 100000,
+        "znear": 0.10000000149011612
+      },
+      "type": "perspective"
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 4,
+            "path": "translation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 4,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 4,
+            "path": "scale"
+          }
+        }
+      ],
+      "name": "Action",
+      "samplers": [
+        {
+          "input": 6,
+          "interpolation": "LINEAR",
+          "output": 7
+        },
+        {
+          "input": 6,
+          "interpolation": "LINEAR",
+          "output": 8
+        },
+        {
+          "input": 6,
+          "interpolation": "LINEAR",
+          "output": 9
+        }
+      ]
+    },
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 4,
+            "path": "weights"
+          }
+        }
+      ],
+      "name": "KeyAction",
+      "samplers": [
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 11
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0.32968899607658386,
+          0.8000000715255737,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "extras": {
+        "targetNames": [
+          "Key 1"
+        ]
+      },
+      "name": "Cube.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "targets": [
+            {
+              "POSITION": 4,
+              "NORMAL": 5
+            }
+          ]
+        }
+      ],
+      "weights": [
+        0
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        10,
+        10,
+        10
+      ],
+      "min": [
+        -10,
+        -10,
+        -10
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 64,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 64,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 108,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 64,
+      "max": [
+        12.620323181152344,
+        0,
+        0
+      ],
+      "min": [
+        -12.620323181152344,
+        0,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 64,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 35,
+      "max": [
+        1.4583333333333333
+      ],
+      "min": [
+        0.041666666666666664
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 35,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 35,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 35,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 30,
+      "max": [
+        1.25
+      ],
+      "min": [
+        0.041666666666666664
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5126,
+      "count": 30,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 768,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 768,
+      "byteOffset": 768
+    },
+    {
+      "buffer": 0,
+      "byteLength": 512,
+      "byteOffset": 1536
+    },
+    {
+      "buffer": 0,
+      "byteLength": 216,
+      "byteOffset": 2048
+    },
+    {
+      "buffer": 0,
+      "byteLength": 768,
+      "byteOffset": 2264
+    },
+    {
+      "buffer": 0,
+      "byteLength": 768,
+      "byteOffset": 3032
+    },
+    {
+      "buffer": 0,
+      "byteLength": 140,
+      "byteOffset": 3800
+    },
+    {
+      "buffer": 0,
+      "byteLength": 420,
+      "byteOffset": 3940
+    },
+    {
+      "buffer": 0,
+      "byteLength": 560,
+      "byteOffset": 4360
+    },
+    {
+      "buffer": 0,
+      "byteLength": 420,
+      "byteOffset": 4920
+    },
+    {
+      "buffer": 0,
+      "byteLength": 120,
+      "byteOffset": 5340
+    },
+    {
+      "buffer": 0,
+      "byteLength": 120,
+      "byteOffset": 5460
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "scene_data.bin",
+      "byteLength": 5580
+    }
+  ]
+}
